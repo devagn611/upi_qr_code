@@ -124,4 +124,31 @@ function hideLoader() {
   loader.style.display = "none";
 }
 
-//page link edit query
+
+function printQRCode() {
+  var dataType = document.getElementById("dataType").value;
+  var qrCode = document.getElementById("qrCode");
+  var Name = document.getElementById("upiName").value;
+  var UPIID = document.getElementById("upiID").value;
+  var PersonName = document.getElementById("personName").value;
+
+  var printWindow = window.open("", "_blank");
+  printWindow.document.open();
+  printWindow.document.write(
+    '<html><head><title>Print QR Code</title></head><body style="text-align:center">'
+  );
+  printWindow.document.write("<h2>QR Code Details</h2>");
+  if (dataType === "upiid") {
+    printWindow.document.write("<p>Payee Name:</p>" + Name);
+    printWindow.document.write("<p>Payee UPI ID:</p>" + UPIID);
+  } else {
+    printWindow.document.write("<p>Name:</p>" + PersonName);
+  }
+  printWindow.document.write('<div style="margin: 0 0 0 36%;" > ');
+  printWindow.document.write(qrCode.innerHTML);
+  printWindow.document.write('<div>');
+
+  printWindow.document.write("</body></html>");
+  printWindow.document.close();
+  printWindow.print();
+}
