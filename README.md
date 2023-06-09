@@ -16,10 +16,10 @@
 <img src="https://drive.google.com/uc?export=view&amp;id=1FoYh_maJhcA0JrbStfuppaLPdDDOIQvx" alt="project-screenshot" width="600" height="400/">
 
 </br><p>UPI ID BASED </p>
-<img src="https://drive.google.com/uc?export=view&amp;id=10mc-6jiFmTYLl1N2vDDdczER3_FWcMN6" alt="project-screenshot" width="600" height="400/">
+<img src="https://drive.google.com/uc?export=view&amp;id=10mc-6jiFmTYLl1N2vDDdczER3_FWcMN6" alt="project-screenshot" width="700" height="400/">
 
 </br><p>A/C NO and IFSC Code Based</p>
-<img src="https://drive.google.com/uc?export=view&amp;id=1LBrGH7rKnbjfYZJkr1GYQjUwL3GCIGFI" alt="project-screenshot" width="600" height="400/">
+<img src="https://drive.google.com/uc?export=view&amp;id=1LBrGH7rKnbjfYZJkr1GYQjUwL3GCIGFI" alt="project-screenshot" width="700" height="400/">
 
   
   
