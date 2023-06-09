@@ -1,6 +1,10 @@
 var qrcode;
 var darkMode = false;
 
+
+
+
+
 function showInputFields() {
   var dataType = document.getElementById("dataType").value;
 
