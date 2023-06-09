@@ -2,19 +2,7 @@
 * {
     box-sizing: border-box;
   }
-  @media only screen and (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
 
-    .input-group input {
-      width: auto;
-    }
-
-    .btn-group {
-      flex-direction: column;
-    }
-  }
 
 body {
   font-family: "Ubuntu", sans-serif;
