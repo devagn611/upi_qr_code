@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic QR Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2>Dynamic QR Code Generator</h2>
+
+      <div class="input-group">
+        <label for="dataType">Select Data Type:</label>
+        <select id="dataType" onchange="showInputFields()">
+          <option value="">-- Select Data Type --</option>
+          <option value="upiid">UPI ID</option>
+          <option value="upi">UPI</option>
+        </select>
+      </div>
+
+      <div class="input-group" id="upiidGroup" style="display: none">
+        <label for="upiName">Name:</label>
+        <input type="text" id="upiName" placeholder="Enter full name" />
+
+        <label for="upiID">UPI ID:</label>
+        <input type="text" id="upiID" placeholder="Enter UPI ID" />
+      </div>
+
+      <div class="input-group" id="upiGroup" style="display: none">
+        <label for="accountNo">Account No:</label>
+        <input type="text" id="accountNo" placeholder="Enter account number" />
+
+        <label for="ifscCode">IFSC Code:</label>
+        <input type="text" id="ifscCode" placeholder="Enter IFSC code" />
+
+        <label for="personName">Name of Person:</label>
+        <input type="text" id="personName" placeholder="Enter name of person" />
+      </div>
+
+      <div>
+        <button id="qrGen" onclick="generateQRCode()">Generate QR Code</button>
+        
+        <!-- Add print button -->
+      </div>
+
+      <div id="qrCode"></div>
+      
+
+      <div class="btn-group">
+        <button id="printQRBtn" onclick="printQRCode()">Print</button>  
+        <button id="downloadQRBtn" onclick="downloadQRCode()">Download</button>
+      </div>
+
+      <div class="btn-group">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </div>
+
+      <div class="loader" id="loader">
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+      function printQRCode() {
+        var dataType = document.getElementById("dataType").value;
+        var qrCode = document.getElementById("qrCode");
+        var Name = document.getElementById("upiName").value;
+        var UPIID = document.getElementById("upiID").value;
+        var PersonName = document.getElementById("personName").value;
+
+        var printWindow = window.open("", "_blank");
+        printWindow.document.open();
+        printWindow.document.write(
+          '<html><head><title>Print QR Code</title></head><body style="text-align:center">'
+        );
+        printWindow.document.write("<h2>QR Code Details</h2>");
+        if (dataType === "upiid") {
+          printWindow.document.write("<p>Payee Name:</p>" + Name);
+          printWindow.document.write("<p>Payee UPI ID:</p>" + UPIID);
+        } else {
+          printWindow.document.write("<p>Name:</p>" + PersonName);
+        }
+        printWindow.document.write(qrCode.innerHTML);
+        printWindow.document.write("</body></html>");
+        printWindow.document.close();
+        printWindow.print();
+      }
+    </script>
+  </body>
+</html>
