@@ -1,10 +1,6 @@
 var qrcode;
 var darkMode = false;
 
-
-
-
-
 function showInputFields() {
   var dataType = document.getElementById("dataType").value;
 
@@ -21,6 +17,9 @@ function showInputFields() {
 }
 
 function generateQRCode() {
+  var qrCodeElement = document.getElementById("qrCode");
+  qrCodeElement.innerHTML = ""; // Clear the contents of the QR code element
+
   var dataType = document.getElementById("dataType").value;
 
   if (dataType === "upi") {
