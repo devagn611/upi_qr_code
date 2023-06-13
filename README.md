@@ -8,8 +8,9 @@
 
 <h2>🚀 Demo</h2>
 
-[1.Click Here](https://devagn611.github.io/upi_qr_code)  </br>
-[2.Click Here](https://upi-qr-code.onrender.com/)
+[1.Click Here](https://upi-qr-code.onrender.com/)</br>
+[2.Click Here](https://devagn611.github.io/upi_qr_code)  
+
 
 <h2>Project Screenshots:</h2>
 
