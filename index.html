@@ -13,30 +13,25 @@
   </head>
   <body>
     <nav>
+      <div class="title-container">
+        <h2>UPI QR Code Generator</h2>
+      </div>
       <ul>
         <li><a href="#">Home</a></li>
-        <li>
-          <a
-            href="https://devagn611.github.io/Qr_Code_Generator/"
-            target="_blank"
-            >Qr Generator</a
-          >
-        </li>
+        <li>  <a href="https://devagn611.github.io/Qr_Code_Generator/" target="_blank" >Qr Generator</a></li>
         <li><a href="about.html">About</a></li>
-        <button id="dark-button" style="left: 10px" onclick="toggleDarkMode()">
-          Dark Mode
-        </button>
+        
       </ul>
     </nav>
     <div class="container">
-      <h2>UPI QR Code Generator</h2>
+      <span class="blur1"></span>
       <div class="entrygroup">
         <div class="input-group">
           <label for="dataType">Select Data Type:</label>
           <select id="dataType" onchange="showInputFields()">
             <option value="">-- Select Data Type --</option>
             <option value="upiid">UPI ID</option>
-            <option value="upi">UPI</option>
+            <option value="upi">Account No</option>
           </select>
         </div>
 
@@ -144,6 +139,7 @@
             </svg>
           </div>
         </div>
+        
       </div>
       <div class="qr-code-button">
         <button id="printQRBtn" onclick="printQRCode()">Print</button>
@@ -151,8 +147,13 @@
         <a id="upilinkapp">Pay Using App</a>
       </div>
        <div style="clear:both; margin-top:10px;"><a href="https://github.com/devagn611/upi_qr_code" target="_blank">View On Github</a></div>
+       <span class="blur2"></span>
+      
     </div>
 
+    <div class="main-logo" style="text-align:center;">
+      <img src="https://devagn-portfolio.onrender.com/assets/images/sign_name_1.png" alt="" srcset="">
+    </div>
     <div class="loader" id="loader">
       <div class="spinner"></div>
     </div>
