@@ -42,4 +42,5 @@ Technologies used in the project:
 *   rawgitQRAPI
 
 <h2>Author</h2> 
+
 [@Devagn](https://github.com/devagn611)  
