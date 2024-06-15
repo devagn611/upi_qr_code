@@ -15,13 +15,10 @@
 <h2>Project Screenshots:</h2>
 
 </br><p>Home Page</p>
-<img src="https://drive.google.com/uc?export=view&amp;id=1FoYh_maJhcA0JrbStfuppaLPdDDOIQvx" alt="project-screenshot" width="600" height="400/">
+<img src="https://drive.google.com/uc?export=view&amp;id=1bO6J5kNjdCikRARWtM4DTIgju_1eNVA9" alt="project-screenshot" width="700" height="400/">
 
 </br><p>UPI ID BASED </p>
-<img src="https://drive.google.com/uc?export=view&amp;id=10mc-6jiFmTYLl1N2vDDdczER3_FWcMN6" alt="project-screenshot" width="700" height="400/">
-
-</br><p>A/C NO and IFSC Code Based</p>
-<img src="https://drive.google.com/uc?export=view&amp;id=1LBrGH7rKnbjfYZJkr1GYQjUwL3GCIGFI" alt="project-screenshot" width="700" height="400/">
+<img src="https://drive.google.com/uc?export=view&amp;id=1mpiAyi55yZJK5y_TdBkdDIhuXw_CRS9m" alt="project-screenshot" width="600" height="400/">
 
   
   
