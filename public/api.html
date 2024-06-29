@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <style>
+    @media print {
+      body * {
+        display: none;
+      }
+
+      #printArea,
+      #printArea * {
+        display: block;
+      }
+
+      #printArea {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  p-4">
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse pb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/463px-UPI-Logo-vector.svg.png?20200901100648" class="h-5" alt="Upi Logo" />
+            <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">
+              UPI QR Code Generator</span>
+          </a>
+          <button data-collapse-toggle="navbar-cta" type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-cta" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-3">
+            <a href="https://github.com/devagn611" target="_blank"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+     Github &rarr;
+            </a>
+            <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+            
+          </div>
+          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a
+                  href="/qrgen"
+                  class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500"
+           
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="/api" 
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+             
+                  >API</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+              </li>
+              <!-- <li>
+                <a href="#"
+                  class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex items-center justify-center ">
+        <div
+          class="flex items-center p-6 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/30 max-w-md mx-4"
+        >
+   
+          <img
+          loading="lazy"
+            src="https://avatars.githubusercontent.com/u/99108074?v=4"
+            alt="Profile Picture"
+            class="w-20 h-20 rounded-full object-cover"
+          />
+          <div class="w-px h-16 bg-white/50 mx-6 dark:bg-black/50"></div>
+          <div class="text-black dark:text-white">
+            <h1>Build & Design</h1>
+            <h2 class="text-xl font-semibold mb-2">Maniya Devagn</h2>
+            <p class="text-sm mb-2">Email: devagnmaniya611@gmail.com</p>
+            <!-- <a
+              href="https://example.com"
+              target="_blank"
+              class="text-blue-400 hover:underline"
+              >Website</a
+            > -->
+          </div>
+        </div>
+      </div>
+  
+  <script>
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById("themeToggle");
+    const html = document.documentElement;
+
+    themeToggleBtn.addEventListener("click", function () {
+      html.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        html.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+
+    // Check for saved theme preference or prefer-color-scheme
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+    </script>
+
+
+ 
+</body>
+
+</html>
