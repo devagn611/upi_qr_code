@@ -27,16 +27,16 @@ app.get('/api/genqr', (req, res) => {
 });
 
 app.get('/api/qrgen', async (req, res) => {
-  const { upiid, name, ifsccode, accountnum } = req.query;
+  const { upiid, name, amount,ifsccode, accountnum } = req.query;
 
   try {
     let qrData;
     if (upiid && name) {
-      qrData = `upi://pay?pa=${upiid}&pn=${name}`;
+      qrData = `upi://pay?pa=${upiid}&pn=${name}&am=${amount}`;
     } else if (ifsccode && accountnum && name) {
-      qrData = `upi://pay?pa=${accountnum}@${ifsccode}.ifsc.npci&pn=${name}`;
+      qrData = `upi://pay?pa=${accountnum}@${ifsccode}.ifsc.npci&pn=${name}&am=${amount}`;
     } else {
-      return res.status(400).send('Invalid parameters');
+      return res.status(400).send('?upiid=addupiidhere&name=g');
     }
 
     const qrCodeBuffer = await QRCode.toBuffer(qrData);
