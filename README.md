@@ -30,6 +30,36 @@ Here're some of the project's best features:
 *   Lightning Fast
 *   User-Friendly UI
 
+<h2>API Endpoints</h2>
+
+Payment Interface (PI) Documentation
+build by Devagn Maniya
+Introduction
+The Payment Interface (PI) is a standardized protocol for initiating and processing payments using UPI QR codes. This documentation provides an overview of the PI structure and how to use it.
+
+PI Structure
+The PI consists of key-value pairs separated by '&' characters. The basic structure is:
+
+          https://upi-qr-code.onrender.com/api/qrgen?upiid=upiID&name=name
+
+          https://upi-qr-code.onrender.com/api/qrgen?ifsccode=ifscCode&accountnum=accountNo&name=name;
+        
+Key Parameters
+upiid: Payee address (UPI ID)
+name: Payee name
+am: Amount (optional)
+Example Usage
+Here's an example of a complete PI string:
+
+          https://upi-qr-code.onrender.com/api/qrgen?upiid=devagnmaniya611@oksbi&name=dev&am=
+        
+Important Notes
+Ensure all parameter values are properly URL-encoded.
+The 'am' parameter is optional. If omitted, the user can enter the amount in their UPI app.
+Additional parameters may be supported depending on the UPI implementation.
+Disclaimer
+We are not responsible for any damage caused or mistake by you or while generating qr.
+you and only you are responsible for the loss of your money or Payment.
   
   
 <h2>💻 Built with</h2>
