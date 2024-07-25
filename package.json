@@ -1,9 +1,11 @@
 {
   "name": "upi-qr-app",
   "version": "1.0.0",
-  "description": "This is a Payment Qr Generation Node App",
+  "description": "A Payment QR Generation Node App",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Devagn Maniya",
@@ -11,7 +13,12 @@
   "dependencies": {
     "axios": "^1.7.2",
     "express": "^4.19.2",
-    "nodemon": "^3.1.4",
     "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
