@@ -9,19 +9,7 @@
 <h2>🚀 Demo</h2>
 
 [1.Click Here](https://upi-qr-code.onrender.com/)</br>
- 
 
-
-<h2>Project Screenshots:</h2>
-
-</br><p>Home Page</p>
-<img src="https://drive.google.com/uc?export=view&amp;id=1bO6J5kNjdCikRARWtM4DTIgju_1eNVA9" alt="project-screenshot" width="700" height="400/">
-
-</br><p>UPI ID BASED </p>
-<img src="https://drive.google.com/uc?export=view&amp;id=1mpiAyi55yZJK5y_TdBkdDIhuXw_CRS9m" alt="project-screenshot" width="600" height="400/">
-
-  
-  
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
