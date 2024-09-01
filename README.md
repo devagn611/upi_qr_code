@@ -20,6 +20,12 @@ Here're some of the project's best features:
 
 <h2>API Endpoints</h2>
 
+Remember :
+Host Name: 
+1.https://upi-payment-qr.vercel.app/
+2.https://upi-qr-code.onrender.com/
+
+
 Payment Interface (PI) Documentation
 build by Devagn Maniya
 Introduction
@@ -28,9 +34,9 @@ The Payment Interface (PI) is a standardized protocol for initiating and process
 PI Structure
 The PI consists of key-value pairs separated by '&' characters. The basic structure is:
 
-          https://upi-qr-code.onrender.com/api/qrgen?upiid=upiID&name=name
+          /api/qrgen?upiid=upiID&name=name
 
-          https://upi-qr-code.onrender.com/api/qrgen?ifsccode=ifscCode&accountnum=accountNo&name=name;
+          /api/qrgen?ifsccode=ifscCode&accountnum=accountNo&name=name;
         
 Key Parameters
 upiid: Payee address (UPI ID)
@@ -39,7 +45,7 @@ am: Amount (optional)
 Example Usage
 Here's an example of a complete PI string:
 
-          https://upi-qr-code.onrender.com/api/qrgen?upiid=devagnmaniya611@oksbi&name=dev&am=
+          /api/qrgen?upiid=devagnmaniya611@oksbi&name=dev&am=
         
 Important Notes
 Ensure all parameter values are properly URL-encoded.
@@ -54,9 +60,8 @@ you and only you are responsible for the loss of your money or Payment.
 
 Technologies used in the project:
 
-*   HTML
+*   Node
 *   JAVASCRIPT
-*   CSS
 *   rawgitQRAPI
 
 <h2>Author</h2> 
