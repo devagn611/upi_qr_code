@@ -48,10 +48,15 @@ app.get('/api/qrgen', async (req, res) => {
 });
 
 app.get('/qrgen', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.redirect('https://upi-payment-qr.vercel.app/');
 });
+
 app.get('/api', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/api.html'));
+  res.redirect('https://upi-payment-qr.vercel.app/');
+});
+
+app.get('/', (req, res) => {
+  res.redirect('https://upi-payment-qr.vercel.app/');
 });
 
  app.listen(port, () => {
