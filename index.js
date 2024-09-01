@@ -1,10 +1,18 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors'); // Import the cors package
 const { generateQRCodeFromData, showLoader, hideLoader } = require('./src/QrCode');
 const QRCode = require('qrcode');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8000;
+
+// Enabled CORS for all origins 
+app.use(cors({
+  origin: true, 
+  methods: ['GET', 'POST'], 
+  allowedHeaders: ['Content-Type'], 
+}));
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
