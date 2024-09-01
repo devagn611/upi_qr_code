@@ -47,6 +47,7 @@ app.get('/api/qrgen', async (req, res) => {
   }
 });
 
+//new redirects
 app.get('/qrgen', (req, res) => {
   res.redirect('https://upi-payment-qr.vercel.app/');
 });
